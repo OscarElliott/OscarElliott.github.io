@@ -1,11 +1,10 @@
 ---
-layout: cv
+layout: default
+title: CV
 permalink: /cv/
-title: cv
 nav: true
 nav_order: 5
-cv_pdf: example_pdf.pdf
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
-toc:
-  sidebar: left
+horizontal: true
 ---
+
+<iframe src="https://oscarelliott.github.io/assets/pdf/Oscar%20Elliott%20Resum%C3%A9.pdf" width="100%" height="1100px"></iframe>

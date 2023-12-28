@@ -1,12 +1,7 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - OscarElliott
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - OscarElliott/AI---Comp-Sci-3007
+  - OscarElliott/Paxos-Consensus-Protocol
+  - OscarElliott/TradingBot
