@@ -36,9 +36,11 @@ If you'd like to explore this little project further the code is publically aval
 
 
 {% if site.data.repositories.github_repos %}
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for repo in site.data.repositories.Linux_Shell %}
-    {% include repository/repo.html repository=repo %}
-  {% endfor %}
+<div class="text-center">
+  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-center align-items-center">
+    {% for repo in site.data.repositories.Linux_Shell %}
+      {% include repository/repo.html repository=repo %}
+    {% endfor %}
+  </div>
 </div>
 {% endif %}
