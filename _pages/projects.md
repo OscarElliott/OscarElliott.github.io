@@ -3,7 +3,7 @@ layout: page
 title: projects
 permalink: /projects/
 description: Some of my favourite projects from the past year.
-nav: false
+nav: true
 nav_order: 2
 display_categories: [fun, uni]
 horizontal: true

@@ -5,3 +5,9 @@ github_repos:
   - OscarElliott/AI---Comp-Sci-3007
   - OscarElliott/Paxos-Consensus-Protocol
   - OscarElliott/TradingBot
+
+Linux_Shell:
+  - OscarElliott/Linux-Shell
+
+Paxos:
+  - OscarElliott/Paxos-Consensus-Protocol
