@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Linux Shell
-description: a simple UNIX shell implemented in C
+description: A simple UNIX shell implemented in C
 img:
 importance: 4
 category: fun
