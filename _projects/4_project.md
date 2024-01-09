@@ -19,3 +19,17 @@ category: uni
     Embark on a fascinating journey through the realm of robotics with my implementation of the Viterbi Forward Algorithm. This assignment showcases my proficiency in applying advanced algorithms for robot localization. Delve into the details of how this algorithm predicts the position of a robot, highlighting my grasp of AI concepts in the context of robotics.
 
 
+### GitHub Repository
+
+If you'd like to explore these little projects further the code is publically avalible on my github
+
+
+{% if site.data.repositories.github_repos %}
+<div class="text-center">
+  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-center align-items-center">
+    {% for repo in site.data.repositories.AI %}
+      {% include repository/repo.html repository=repo %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
