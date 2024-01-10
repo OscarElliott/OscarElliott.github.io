@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://OscarElliott.github.iohttps://oscarelliott.github.io//sitemap.xml
+Sitemap: https://OscarElliott.github.iohttps://oscarelliott.github.io/sitemap.xml
