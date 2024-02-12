@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started RSP - A computer science summer intensive bootcamp
+Took part in a computer science summer intensive bootcamp
