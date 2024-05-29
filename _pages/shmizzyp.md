@@ -16,6 +16,7 @@ nav_order: 5
     h1 {
         font-size: 3em;
         margin-top: 50px;
+        cursor: pointer;
     }
     h2 {
         font-size: 2em;
@@ -27,6 +28,10 @@ nav_order: 5
         box-shadow: 0 0 20px pink;
         max-width: 100%;
         height: auto;
+        cursor: pointer;
+    }
+    .hidden {
+        display: none;
     }
     .sparkle {
         font-size: 1.5em;
@@ -41,8 +46,9 @@ nav_order: 5
 </style>
 
 
+<img id="hiddenImage" src="https://oscarelliott.github.io/assets/img/Evilcat.png" class="hidden" alt="Surprise Image">
 
-<h1>I love you <span class="sparkle">❤️</span></h1>
+<h1 onclick="handleClick()" >I love you <span class="sparkle">❤️</span></h1>
 
 <img  onclick="playAudio()" src="https://oscarelliott.github.io/assets/img/cat.png" width="100%" height="600px">
 
@@ -51,6 +57,20 @@ nav_order: 5
 <audio id="audio" src="https://oscarelliott.github.io/assets/img/ewewewewe.mp3"></audio>
 
 <script>
+    let imageSize = 100; // Initial size percentage
+
+    function handleClick() {
+        playAudio();
+        showAndResizeImage();
+    }
+
+    function showAndResizeImage() {
+        const img = document.getElementById('hiddenImage');
+        img.style.display = 'block';
+        imageSize += 20;
+        img.style.width = imageSize + '%';
+    }
+
     function playAudio() {
         var audio = document.getElementById('audio');
         audio.play();
