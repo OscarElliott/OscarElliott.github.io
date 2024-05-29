@@ -9,6 +9,12 @@ category: fun
 
 Purpose Project is an innovative tool designed to assist students in discovering potential future career paths through an engaging and interactive process. The core idea is to provide students with insights into their strengths and areas of interest by evaluating their responses to a set of questions.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/purpose.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 
 ### [Try it Online here](https://oscarelliott.pythonanywhere.com/)
 
