@@ -58,7 +58,7 @@ nav_order: 5
 <audio id="audio" src="https://oscarelliott.github.io/assets/audio/ewewewewe.mp3"></audio>
 
 <script>
-    let imageSize = 3;
+    let imageSize = 2;
 
     function handleClick() {
         showAndResizeImage();
@@ -67,7 +67,7 @@ nav_order: 5
     function showAndResizeImage() {
         const img = document.getElementById('hiddenImage');
         img.style.display = 'block';
-        imageSize += 20;
+        imageSize += 10;
         img.style.cssText = 'width: ' + imageSize + '% !important;';
     }
 
