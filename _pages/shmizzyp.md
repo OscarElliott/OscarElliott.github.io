@@ -68,7 +68,7 @@ nav_order: 5
         const img = document.getElementById('hiddenImage');
         img.style.display = 'block';
         imageSize += 20;
-        img.style.width = imageSize + '%';
+        img.style.cssText = 'width: ' + imageSize + '% !important;';
     }
 
     function playAudio() {
