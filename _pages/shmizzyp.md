@@ -57,10 +57,9 @@ nav_order: 5
 <audio id="audio" src="https://oscarelliott.github.io/assets/audio/ewewewewe.mp3"></audio>
 
 <script>
-    let imageSize = 100; // Initial size percentage
+    let imageSize = 10; // Initial size percentage
 
     function handleClick() {
-        playAudio();
         showAndResizeImage();
     }
 
