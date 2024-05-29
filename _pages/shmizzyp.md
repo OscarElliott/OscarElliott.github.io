@@ -17,6 +17,7 @@ nav_order: 5
         font-size: 3em;
         margin-top: 50px;
         cursor: pointer;
+        padding-bottom: 20px;
     }
     h2 {
         font-size: 2em;
@@ -57,7 +58,7 @@ nav_order: 5
 <audio id="audio" src="https://oscarelliott.github.io/assets/audio/ewewewewe.mp3"></audio>
 
 <script>
-    let imageSize = 10; // Initial size percentage
+    let imageSize = 50px;
 
     function handleClick() {
         showAndResizeImage();
