@@ -46,7 +46,7 @@ nav_order: 5
 </style>
 
 
-<img id="hiddenImage" src="https://oscarelliott.github.io/assets/img/Evilcat.png" class="hidden" alt="Surprise Image">
+<img id="hiddenImage" src="https://oscarelliott.github.io/assets/img/Evilcat.jpeg" class="hidden" alt="Surprise Image">
 
 <h1 onclick="handleClick()" >I love you <span class="sparkle">❤️</span></h1>
 
@@ -54,7 +54,7 @@ nav_order: 5
 
 <h2>Happy Birthday!</h2>
 
-<audio id="audio" src="https://oscarelliott.github.io/assets/img/ewewewewe.mp3"></audio>
+<audio id="audio" src="https://oscarelliott.github.io/assets/audio/ewewewewe.mp3"></audio>
 
 <script>
     let imageSize = 100; // Initial size percentage
