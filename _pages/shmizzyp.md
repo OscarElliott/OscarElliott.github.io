@@ -58,7 +58,7 @@ nav_order: 5
 <audio id="audio" src="https://oscarelliott.github.io/assets/audio/ewewewewe.mp3"></audio>
 
 <script>
-    let imageSize = 50px;
+    let imageSize = 5;
 
     function handleClick() {
         showAndResizeImage();
