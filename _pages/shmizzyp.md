@@ -9,6 +9,6 @@ nav_order: 5
 
 # I love you <3
 
-<iframe src="assets/image.png" width="100%" height="1100px"></iframe>
+<img src="image.png" width="100%" height="800px"></img>
 
 ## Happy Birthday!
