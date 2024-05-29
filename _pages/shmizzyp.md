@@ -44,6 +44,15 @@ nav_order: 5
 
 <h1>I love you <span class="sparkle">❤️</span></h1>
 
-<img src="https://oscarelliott.github.io/assets/img/cat.png" width="100%" height="800px">
+<img  onclick="playAudio()" src="https://oscarelliott.github.io/assets/img/cat.png" width="100%" height="600px">
 
 <h2>Happy Birthday!</h2>
+
+<audio id="audio" src="https://oscarelliott.github.io/assets/img/ewewewewe.mp3"></audio>
+
+<script>
+    function playAudio() {
+        var audio = document.getElementById('audio');
+        audio.play();
+    }
+</script>
