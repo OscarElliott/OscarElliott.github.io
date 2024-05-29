@@ -50,7 +50,7 @@ nav_order: 5
 
 <h1 onclick="handleClick()" >I love you <span class="sparkle">❤️</span></h1>
 
-<img  onclick="playAudio()" src="https://oscarelliott.github.io/assets/img/cat.png" width="100%" height="600px">
+<img  onclick="playAudio()" src="https://oscarelliott.github.io/assets/img/cat.png" width="100%" height="400px">
 
 <h2>Happy Birthday!</h2>
 
