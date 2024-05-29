@@ -2,7 +2,7 @@
 layout: page
 title: Linux Shell
 description: A simple UNIX shell implemented in C
-img:
+img: assets/img/linux.png
 importance: 4
 category: fun
 ---

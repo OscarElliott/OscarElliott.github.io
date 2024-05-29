@@ -2,7 +2,7 @@
 layout: page
 title: Purpose Project
 description: A project to help students identify potential future prospects based on a fun conversation.
-img:
+img: assets/img/purpose.png
 importance: 1
 category: fun
 ---

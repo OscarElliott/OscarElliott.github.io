@@ -2,7 +2,7 @@
 layout: page
 title: Paxos Consensus Mechanism
 description: Implementing the Paxos consensus algorithm in Java for distributed consensus.
-img:
+img: assets/img/paxos.png
 importance: 4
 category: fun
 ---
