@@ -47,7 +47,7 @@ nav_order: 5
 </style>
 
 
-<img id="hiddenImage" src="https://oscarelliott.github.io/assets/img/Evilcat.jpeg" class="hidden" alt="Surprise Image">
+<img align-content: center id="hiddenImage" src="https://oscarelliott.github.io/assets/img/Evilcat.jpeg" class="hidden" alt="Surprise Image">
 
 <h1 onclick="handleClick()" >I love you <span class="sparkle">❤️</span></h1>
 
@@ -58,7 +58,7 @@ nav_order: 5
 <audio id="audio" src="https://oscarelliott.github.io/assets/audio/ewewewewe.mp3"></audio>
 
 <script>
-    let imageSize = 5;
+    let imageSize = 3;
 
     function handleClick() {
         showAndResizeImage();
