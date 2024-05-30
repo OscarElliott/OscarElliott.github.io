@@ -33,9 +33,6 @@ nav_order: 5
     }
     .hidden {
         display: none;
-    }
-    #hiddenImage {
-        display: block;
         margin: auto;
     }
     .sparkle {
