@@ -47,11 +47,11 @@ nav_order: 5
 </style>
 
 
-<img src="https://oscarelliott.github.io/assets/img/Evilcat.jpeg" class="hidden" alt="Surprise Image">
+<img id="hiddenImage" src="https://oscarelliott.github.io/assets/img/Evilcat.jpeg" class="hidden" alt="Surprise Image">
 
 <h1 onclick="handleClick()" >I love you <span class="sparkle">❤️</span></h1>
 
-<img id="hiddenImage" onclick="playAudio()" src="https://oscarelliott.github.io/assets/img/cat.png" width="100%" height="400px">
+<img onclick="playAudio()" src="https://oscarelliott.github.io/assets/img/cat.png" width="100%" height="400px">
 
 <h2>Happy Birthday!</h2>
 
