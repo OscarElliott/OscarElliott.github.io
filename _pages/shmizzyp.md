@@ -33,7 +33,6 @@ nav_order: 5
     }
     .hidden {
         display: none;
-        margin: auto;
     }
     .sparkle {
         font-size: 1.5em;
