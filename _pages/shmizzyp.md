@@ -66,9 +66,9 @@ nav_order: 5
 
     function showAndResizeImage() {
         const img = document.getElementById('hiddenImage');
-        img.style.display = 'block';
+        img.classList.remove('hidden');
         imageSize += 10;
-        img.style.cssText = 'width: ' + imageSize + '% !important;';
+        img.style.cssText = 'width: ' + imageSize;
     }
 
     function playAudio() {
