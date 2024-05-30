@@ -51,7 +51,7 @@ nav_order: 5
 
 <h1 onclick="handleClick()" >I love you <span class="sparkle">❤️</span></h1>
 
-<img onclick="playAudio()" src="https://oscarelliott.github.io/assets/img/cat.png" width="100%" height="300px">
+<img onclick="playAudio()" src="https://oscarelliott.github.io/assets/img/cat.png" width="75%" height="200px">
 
 <h2>Happy Birthday!</h2>
 
@@ -67,8 +67,8 @@ nav_order: 5
     function showAndResizeImage() {
         const img = document.getElementById('hiddenImage');
         img.classList.remove('hidden');
-        imageSize += 10;
-        img.style.cssText = 'width: ' + imageSize;
+        imageSize += 5;
+        img.style.width = imageSize + '%';
     }
 
     function playAudio() {
