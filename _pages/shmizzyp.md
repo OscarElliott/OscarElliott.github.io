@@ -34,6 +34,10 @@ nav_order: 5
     .hidden {
         display: none;
     }
+    #hiddenImage {
+        display: block;
+        margin: auto;
+    }
     .sparkle {
         font-size: 1.5em;
         color: #ffd700;
@@ -47,7 +51,7 @@ nav_order: 5
 </style>
 
 
-<img align-content: center id="hiddenImage" src="https://oscarelliott.github.io/assets/img/Evilcat.jpeg" class="hidden" alt="Surprise Image">
+<img id="hiddenImage" src="https://oscarelliott.github.io/assets/img/Evilcat.jpeg" class="hidden" alt="Surprise Image">
 
 <h1 onclick="handleClick()" >I love you <span class="sparkle">❤️</span></h1>
 
