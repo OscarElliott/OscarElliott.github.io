@@ -47,7 +47,7 @@ nav_order: 5
 </style>
 
 
-<img id="hiddenImage" src="https://oscarelliott.github.io/assets/img/Evilcat.jpeg" class="hidden" alt="Surprise Image">
+<img id="hiddenImage" onclick="handleClick()" src="https://oscarelliott.github.io/assets/img/Evilcat.jpeg" class="hidden" alt="Surprise Image">
 
 <h1 onclick="handleClick()" >I love you <span class="sparkle">❤️</span></h1>
 
