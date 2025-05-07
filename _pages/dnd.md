@@ -70,6 +70,7 @@ nav_order: 8
   <br>
   <label for="profession">Choose a profession:</label>
   <select id="profession">
+    <option value="random">Random</option>
     <option value="blacksmith">Blacksmith</option>
     <option value="wizard">Wizard</option>
     <option value="merchant">Merchant</option>
@@ -118,7 +119,6 @@ nav_order: 8
     <option value="warlock">Warlock</option>
     <option value="watchman">Watchman</option>
     <option value="weaver">Weaver</option>
-    <option value="random">Random</option>
     </select>
 
 
@@ -366,10 +366,6 @@ nav_order: 8
     'monk', 'navigator', 'paladin', 'pirate', 'plague-doctor', 'priest', 'scout', 'sellsword',
     'shaman', 'squire', 'tinker', 'trapper', 'vagabond', 'vintner', 'warlock', 'watchman', 'weaver'
     ];
-
-    function randomFromArray(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
-    }
 
   function randomFromArray(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
