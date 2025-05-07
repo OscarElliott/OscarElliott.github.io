@@ -5,8 +5,8 @@ title: NPC Generator
 description: Generate NPC's for Emesia
 nav: false
 nav_order: 8
-
 ---
+
 <style>
   :root {
     --bg: #1a1a1a;
@@ -62,6 +62,9 @@ nav_order: 8
     <option value="dwarf">Dwarf</option>
     <option value="elf">Elf</option>
     <option value="human">Human</option>
+    <option value="halfElf">Half-Elf</option>
+    <option value="hobbit">Hobbit</option>
+    <option value="goblin">Goblin</option>
   </select>
 
   <br>
@@ -74,6 +77,7 @@ nav_order: 8
     <option value="bard">Bard</option>
     <option value="cleric">Cleric</option>
     <option value="ranger">Ranger</option>
+    <option value="random">Random</option>
   </select>
 
   <br>
@@ -84,6 +88,7 @@ nav_order: 8
 
 <script>
   const nameLists = {};
+  const lastNameLists = {};
   const personalities = [
     'brave', 'cunning', 'greedy', 'kind', 'mysterious', 'noble', 'reckless', 'sarcastic', 'wise'
   ];
@@ -97,17 +102,17 @@ nav_order: 8
   }
 
   async function loadNames(race) {
-    if (nameLists[race]) return;
-
-    try {
-      const response = await fetch(`/assets/dndGenLists/names/${race}.txt`);
-      if (!response.ok) throw new Error('Failed to fetch names');
-      const text = await response.text();
-      nameLists[race] = text.split('\n').map(name => name.trim()).filter(name => name.length > 0);
-    } catch (err) {
-      console.error(err);
-      alert(`Could not load names for ${race}`);
-      nameLists[race] = ['Nameless']; // fallback
+    if (!nameLists[race]) {
+      try {
+        const response = await fetch(`/assets/dndGenLists/names/${race}.txt`);
+        if (!response.ok) throw new Error('Failed to fetch names');
+        const text = await response.text();
+        nameLists[race] = text.split('\n').map(name => name.trim()).filter(name => name.length > 0);
+      } catch (err) {
+        console.error(err);
+        alert(`Could not load names for ${race}`);
+        nameLists[race] = ['Nameless'];
+      }
     }
   }
 
@@ -117,9 +122,40 @@ nav_order: 8
 
     await loadNames(race);
     const names = nameLists[race];
-
     const name = randomFromArray(names);
-    const age = race === 'elf' ? Math.floor(Math.random() * 282) + 18 : Math.floor(Math.random() * 82) + 18;
+
+    let age;
+    switch (race) {
+      case 'elf': age = Math.floor(Math.random() * 3982) + 18; break;
+      case 'dwarf': age = Math.floor(Math.random() * 483) + 18; break;
+      case 'halfElf': age = Math.floor(Math.random() * 12) + 15; break;
+      case 'goblin': age = Math.floor(Math.random() * 38) + 8; break;
+      case 'hobbit': age = Math.floor(Math.random() * 60) + 18; break;
+      case 'human':
+      default: age = Math.floor(Math.random() * 82) + 18; break;
+    }
+
+    let birthPlaces;
+    switch (race) {
+      case 'elf':
+        birthPlaces = ['ElderGrove','Evergrove','Iilyseum','Hellivita','Hellivita','Hellivita'];
+        break;
+      case 'dwarf':
+        birthPlaces = ['Twon','Omber','Garret','Traust','Bonrith','Garret','Omber'];
+        break;
+      case 'hobbit':
+        birthPlaces = ['Twon','Omber','Garret','Traust','Harnford','Bonrith','Harnford','Umbra Hills'];
+        break;
+      case 'halfElf':
+        birthPlaces = ['Evergrove','Twon','Shrift','Bonrith'];
+        break;
+      case 'human':
+      default:
+        birthPlaces = ['Twon','Omber','Garret','Bonrith','Traust','Free Cities','Ivory Isles','Umbra Hills','Khari Desert','Stamford'];
+        break;
+    }
+
+    const birthPlace = randomFromArray(birthPlaces);
     const personality = randomFromArray(personalities);
     const quirk = randomFromArray(quirks);
 
@@ -128,6 +164,7 @@ nav_order: 8
       <p><strong>Race:</strong> ${race.charAt(0).toUpperCase() + race.slice(1)}</p>
       <p><strong>Profession:</strong> ${profession.charAt(0).toUpperCase() + profession.slice(1)}</p>
       <p><strong>Age:</strong> ${age}</p>
+      <p><strong>Birth Place:</strong> ${birthPlace}</p>
       <p><strong>Personality:</strong> ${personality}</p>
       <p><strong>Quirk:</strong> ${quirk}</p>
     `;
