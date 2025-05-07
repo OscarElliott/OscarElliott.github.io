@@ -396,11 +396,11 @@ nav_order: 8
         const response = await fetch(`/assets/dndGenLists/lastNames/${race}.txt`);
         if (!response.ok) throw new Error('Failed to fetch names');
         const text = await response.text();
-        nameLists[race] = text.split('\n').map(name => name.trim()).filter(name => name.length > 0);
+        lastNameLists[race] = text.split('\n').map(name => name.trim()).filter(name => name.length > 0);
       } catch (err) {
         console.error(err);
-        alert(`Could not load names for ${race}`);
-        nameLists[race] = ['Nameless'];
+        alert(`Could not load last names for ${race}`);
+        lastNameLists[race] = ['Nameless'];
       }
     }
   }
