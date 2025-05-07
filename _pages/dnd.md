@@ -413,6 +413,7 @@ nav_order: 8
     const selectedProfession = profession === 'random' ? randomFromArray(professions) : profession;
 
     await loadNames(race);
+    await loadLastNames(race);
     const names = nameLists[race];
     const lastNames = lastNameLists[race];
     const name = randomFromArray(names);
