@@ -400,6 +400,7 @@ nav_order: 8
     await loadNames(race);
     const names = nameLists[race];
     const name = randomFromArray(names);
+    const lastName = randomFromArray(lastNames);
 
     let age;
     switch (race) {
@@ -437,7 +438,7 @@ nav_order: 8
     const quirk = randomFromArray(quirks);
 
     const npcHTML = `
-      <h2>${name}</h2>
+      <h2>${name} ${lastName}</h2>
       <p><strong>Race:</strong> ${race.charAt(0).toUpperCase() + race.slice(1)}</p>
       <p><strong>Profession:</strong> ${profession.charAt(0).toUpperCase() + profession.slice(1)}</p>
       <p><strong>Age:</strong> ${age}</p>
