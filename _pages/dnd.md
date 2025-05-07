@@ -390,6 +390,21 @@ nav_order: 8
     }
   }
 
+  async function loadLastNames(race) {
+    if (!lastNameLists[race]) {
+      try {
+        const response = await fetch(`/assets/dndGenLists/lastNames/${race}.txt`);
+        if (!response.ok) throw new Error('Failed to fetch names');
+        const text = await response.text();
+        nameLists[race] = text.split('\n').map(name => name.trim()).filter(name => name.length > 0);
+      } catch (err) {
+        console.error(err);
+        alert(`Could not load names for ${race}`);
+        nameLists[race] = ['Nameless'];
+      }
+    }
+  }
+
   async function generateNPC() {
     const race = document.getElementById('race').value;
     const profession = document.getElementById('profession').value;
@@ -399,6 +414,7 @@ nav_order: 8
 
     await loadNames(race);
     const names = nameLists[race];
+    const lastNames = lastNameLists[race];
     const name = randomFromArray(names);
     const lastName = randomFromArray(lastNames);
 
