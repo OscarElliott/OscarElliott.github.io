@@ -1,3 +1,12 @@
+---
+layout: page
+permalink: /dnd
+title: NPC Generator
+description: Generate NPC's for Emesia
+nav: false
+nav_order: 8
+---
+
 <html> <head> <title>D&D NPC Generator</title> <style> body { font-family: Arial, sans-serif; padding: 2rem; max-width: 600px; margin: auto; background: #f2f2f2; } select, button { margin: 0.5rem 0; padding: 0.5rem; } .npc-card { background: white; border-radius: 8px; padding: 1rem; margin-top: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); } </style> </head> <body> <h1>D&D NPC Generator</h1>
 <label for="race">Choose a race:</label>
 <select id="race">
