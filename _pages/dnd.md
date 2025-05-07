@@ -77,8 +77,50 @@ nav_order: 8
     <option value="bard">Bard</option>
     <option value="cleric">Cleric</option>
     <option value="ranger">Ranger</option>
+    <option value="alchemist">Alchemist</option>
+    <option value="archer">Archer</option>
+    <option value="assassin">Assassin</option>
+    <option value="barbarian">Barbarian</option>
+    <option value="beastmaster">Beastmaster</option>
+    <option value="blackguard">Blackguard</option>
+    <option value="captain">Captain</option>
+    <option value="cartographer">Cartographer</option>
+    <option value="conjuror">Conjuror</option>
+    <option value="courier">Courier</option>
+    <option value="cook">Cook</option>
+    <option value="druid">Druid</option>
+    <option value="enchanter">Enchanter</option>
+    <option value="fletcher">Fletcher</option>
+    <option value="gladiator">Gladiator</option>
+    <option value="healer">Healer</option>
+    <option value="herbalist">Herbalist</option>
+    <option value="historian">Historian</option>
+    <option value="hunter">Hunter</option>
+    <option value="innkeeper">Innkeeper</option>
+    <option value="jester">Jester</option>
+    <option value="knight">Knight</option>
+    <option value="locksmith">Locksmith</option>
+    <option value="mage">Mage</option>
+    <option value="monk">Monk</option>
+    <option value="navigator">Navigator</option>
+    <option value="paladin">Paladin</option>
+    <option value="pirate">Pirate</option>
+    <option value="plague-doctor">Plague Doctor</option>
+    <option value="priest">Priest</option>
+    <option value="scout">Scout</option>
+    <option value="sellsword">Sellsword</option>
+    <option value="shaman">Shaman</option>
+    <option value="squire">Squire</option>
+    <option value="tinker">Tinker</option>
+    <option value="trapper">Trapper</option>
+    <option value="vagabond">Vagabond</option>
+    <option value="vintner">Vintner</option>
+    <option value="warlock">Warlock</option>
+    <option value="watchman">Watchman</option>
+    <option value="weaver">Weaver</option>
     <option value="random">Random</option>
-  </select>
+    </select>
+
 
   <br>
   <button onclick="generateNPC()">Generate NPC</button>
@@ -316,6 +358,18 @@ nav_order: 8
     'keeps a collection of old scrolls with unknown writing on them'
   ];
 
+  const professions = [
+    'blacksmith', 'wizard', 'merchant', 'thief', 'bard', 'cleric', 'ranger', 'alchemist',
+    'archer', 'assassin', 'barbarian', 'beastmaster', 'blackguard', 'captain', 'cartographer',
+    'conjuror', 'courier', 'cook', 'druid', 'enchanter', 'fletcher', 'gladiator', 'healer',
+    'herbalist', 'historian', 'hunter', 'innkeeper', 'jester', 'knight', 'locksmith', 'mage',
+    'monk', 'navigator', 'paladin', 'pirate', 'plague-doctor', 'priest', 'scout', 'sellsword',
+    'shaman', 'squire', 'tinker', 'trapper', 'vagabond', 'vintner', 'warlock', 'watchman', 'weaver'
+    ];
+
+    function randomFromArray(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+    }
 
   function randomFromArray(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
@@ -339,6 +393,9 @@ nav_order: 8
   async function generateNPC() {
     const race = document.getElementById('race').value;
     const profession = document.getElementById('profession').value;
+
+    // If 'random' is selected, choose a random profession
+    const selectedProfession = profession === 'random' ? randomFromArray(professions) : profession;
 
     await loadNames(race);
     const names = nameLists[race];
