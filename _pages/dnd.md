@@ -358,7 +358,7 @@ nav_order: 8
     'keeps a collection of old scrolls with unknown writing on them'
   ];
 
-  const emesianConnection = [
+  const emesianConnections = [
   'Secretly a member of the clock',
   'Undercover member of the Grey Nails',
   'Deeply religious to Seldarine',
@@ -544,6 +544,7 @@ nav_order: 8
     const birthPlace = randomFromArray(birthPlaces);
     const personality = randomFromArray(personalities);
     const quirk = randomFromArray(quirks);
+    const emesianConnection = randomFromArray(emesianConnection);
 
     const npcHTML = `
       <h2>${name} ${lastName}</h2>
@@ -553,6 +554,7 @@ nav_order: 8
       <p><strong>Birth Place:</strong> ${birthPlace}</p>
       <p><strong>Personality:</strong> ${personality}</p>
       <p><strong>Quirk:</strong> ${quirk}</p>
+      <p><strong>Hook:</strong> ${emesianConnection}</p>
     `;
 
     const npcDiv = document.getElementById('npcResult');
