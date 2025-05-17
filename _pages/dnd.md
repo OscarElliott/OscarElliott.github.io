@@ -544,7 +544,7 @@ nav_order: 8
     const birthPlace = randomFromArray(birthPlaces);
     const personality = randomFromArray(personalities);
     const quirk = randomFromArray(quirks);
-    const emesianConnection = randomFromArray(emesianConnection);
+    const emesianConnection = randomFromArray(emesianConnections);
 
     const npcHTML = `
       <h2>${name} ${lastName}</h2>
