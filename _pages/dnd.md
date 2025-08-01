@@ -535,6 +535,9 @@ nav_order: 8
       case 'halfElf':
         birthPlaces = ['Evergrove','Twon','Shrift','Bonrith'];
         break;
+      case 'goblin':
+        birthPlaces = ['Omber','Garret','Garret','The Kahri Desert', 'The Wilderness'];
+        break;
       case 'human':
       default:
         birthPlaces = ['Twon','Omber','Garret','Bonrith','Traust','Free Cities','Ivory Isles','Umbra Hills','Khari Desert','Stamford'];
